@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  cdh-utils-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cdh-utils-api
+    ports:
+      - "8081:8081"
+    volumes:
+      - .:/app
+    restart: unless-stopped
